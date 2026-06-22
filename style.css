@@ -1,0 +1,235 @@
+.p{
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body{
+  font-family: Roboto,Arial;
+  margin: 0;
+  padding-top: 80px;
+  padding-left: 96px;
+  padding-right: 24px;
+  background-color: rgb(248,248,248);
+}
+.sidebar{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  top: 55px;
+  width: 74px;
+  background-color: aliceblue;
+  z-index: 200;
+  padding-top: 5px;
+}
+.sidebar-link{
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.sidebar-link img{
+  height: 24px;
+  margin-bottom: 4px;
+
+}
+.sidebar-link div{
+  font-size: 10px;
+}
+.header{
+  height: 56px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  background-color: rgb(255, 255, 255);
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(226, 226, 226);
+
+}
+.left-section{
+  display: flex;
+  align-items: center; 
+}
+.hamburger-menu{
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 24px;
+}
+.youtube-logo{
+  height: 24px;
+}
+.middle-section{
+  flex: 1;
+  margin-left: 70px;
+  margin-right: 35px;
+  display: flex;
+  align-items: center;
+}
+.search-bar{
+  height: 36px;
+  flex: 1;
+  padding-left: 12px;
+  font-size: 16px;
+  border: 1px solid rgb(226, 226, 226);
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  width: 0;
+}
+.search-bar::placeholder{
+  font-size: 16px;
+}
+
+.search-button{
+  height: 40px;
+  width: 60px;
+  background-color: rgb(240, 240, 240);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(226, 226, 226);
+  border-radius: 2px;
+  margin-left: -1px;
+  margin-right: 12px;
+}
+.search-button,
+.mic-button,
+.create-icon-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search-button .tooltip,
+.mic-button .tooltip,
+.create-icon-container .tooltip{
+  background-color: grey;
+  position: absolute;
+  color: white;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+  bottom: -30px;
+  font-size: 12px;
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+.search-button:hover .tooltip,
+.mic-button:hover .tooltip,
+.create-icon-container:hover .tooltip{
+  opacity: 1;
+}
+.search-icon{
+  height: 25px;
+}
+.mic-button{
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: rgb(240, 240, 240);
+  border: none;
+}
+.mic-icon{
+  height: 24px;
+  background-color: rgb(240, 240, 240);
+
+}
+.right-section{
+  width: 180px;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+}
+.create-icon{
+  height: 26px;
+}
+.apps-icon{
+  height: 24px;
+}
+.notifications-icon{
+  height: 24px;
+}
+.current-user-pic{
+  height: 32px;
+  border-radius: 16px;
+}
+
+.thumbnail{
+  width: 100%;
+}
+.thumbnail-row{
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 20px;
+  row-gap: 30px;
+}
+@media(max-width: 750px){
+  .video-grid{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.video-time{
+  font-size: 12px;
+  padding: 4px 10px;
+  background-color: black;
+  color:rgb(255, 255, 255);
+  position : absolute;
+  bottom: 10px;
+  right: 5px;
+  border-radius: 2px;
+}
+.notifications-icon-container {
+  position: relative;
+}
+.notifications-count {
+  position: absolute;
+  top: -2px;
+  right: -1px;
+  background-color: rgb(200, 0, 0);
+  color: white;
+  font-size: 12px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 2px;
+  padding: 2px;
+  border-radius: 10px;
+}
+.video-title{
+  margin-top: 0;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.video-author,
+.video-stats{
+  font-size: 12px;
+  color:rgb(96,96,96);
+}
+.video-author{
+  margin-bottom: 4px;
+}
+.video-info-grid{
+  display: grid;
+  grid-template-columns: 50px 1fr;
+  column-gap: 12px;
+}
+.profile-pic{
+  width: 36px;
+  border-radius: 36px;
+}
